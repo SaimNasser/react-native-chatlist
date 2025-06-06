@@ -1,0 +1,165 @@
+{
+  "name": "@saimnasser/react-native-chatlist",
+  "version": "1.0.1",
+  "description": "ChatListA lightweight and highly customizable chat list component for React Native.ChatList provides the essential building blocks for building chat interfaces—like a chat bubble, input field, and message list—while giving you full control to customize and extend every part. It’s designed for developers who want flexibility without starting from scratch.Features:    � Minimal prebuilt components – includes basic chat bubbles and input fields to help you get started�    � Fully customizable – inject your own components for messages, headers, footers, and more�    � Keyboard-aware out of the box – automatic handling of keyboard avoiding and scroll behavior�    � Lightweight and easy to integrate into existing projects�Ideal for teams who want a solid foundation but complete control over the chat experience.",
+  "main": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.tsx",
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "react-native.config.js",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "example": "yarn workspace react-native-chatlist-example",
+    "test": "jest",
+    "typecheck": "tsc",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli lib",
+    "prepare": "bob build",
+    "release": "release-it --only-version"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-chat",
+    "chat-ui",
+    "chat-component",
+    "chat-list",
+    "messaging",
+    "chat-interface",
+    "chat-bubble",
+    "react-native-chat-ui",
+    "react-native-messaging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaimNasser/react-native-chatlist.git"
+  },
+  "author": "Saim Nasser <saimnasser098@gmail.com> (https://github.com/SaimNasser)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaimNasser/react-native-chatlist/issues"
+  },
+  "homepage": "https://github.com/SaimNasser/react-native-chatlist#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/compat": "^1.2.7",
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.22.0",
+    "@evilmartians/lefthook": "^1.5.0",
+    "@react-native/babel-preset": "0.78.2",
+    "@react-native/eslint-config": "^0.78.0",
+    "@release-it/conventional-changelog": "^9.0.2",
+    "@types/jest": "^29.5.5",
+    "@types/react": "^19.0.12",
+    "commitlint": "^19.6.1",
+    "del-cli": "^5.1.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "react": "19.0.0",
+    "react-native": "0.79.2",
+    "react-native-builder-bob": "^0.40.11",
+    "react-native-keyboard-controller": "^x.x.x",
+    "react-native-reanimated": "^3.0.0",
+    "release-it": "^17.10.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-keyboard-controller": "^x.x.x",
+    "react-native-reanimated": "^3.0.0"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "packageManager": "yarn@3.6.1",
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": {
+          "name": "angular"
+        }
+      }
+    }
+  },
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "create-react-native-library": {
+    "languages": "js",
+    "type": "library",
+    "version": "0.50.3"
+  }
+}
