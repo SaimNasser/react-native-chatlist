@@ -8,7 +8,7 @@
     <td align="center">
       <img src="./gifs/android.gif" alt="Android Demo" width="300" />
     </td>
-    <td width="20"></td> <!-- spacer column -->
+    <td width="100"></td> <!-- spacer column -->
     <td align="center">
       <img src="./gifs/ios.gif" alt="iOS Demo" width="300" />
     </td>
