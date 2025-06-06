@@ -1,6 +1,6 @@
 {
   "name": "@saimnasser/react-native-chatlist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ChatListA lightweight and highly customizable chat list component for React Native.ChatList provides the essential building blocks for building chat interfaces—like a chat bubble, input field, and message list—while giving you full control to customize and extend every part. It’s designed for developers who want flexibility without starting from scratch.Features:    � Minimal prebuilt components – includes basic chat bubbles and input fields to help you get started�    � Fully customizable – inject your own components for messages, headers, footers, and more�    � Keyboard-aware out of the box – automatic handling of keyboard avoiding and scroll behavior�    � Lightweight and easy to integrate into existing projects�Ideal for teams who want a solid foundation but complete control over the chat experience.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
