@@ -3,9 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: iOS / Android](https://img.shields.io/badge/platform-iOS%20%7C%20Android-blue.svg)](https://reactnative.dev)
 
-<img src="./gifs/android.gif" alt="Android Demo" width="400" />
-<img src="./gifs/ios.gif" alt="IOS Demo" width="400" />
-
+<div style="display: flex; gap: 10px;">
+  <img src="./gifs/android.gif" alt="Android Demo" width="300" />
+  <img src="./gifs/ios.gif" alt="IOS Demo" width="300" />
+</div>
 A flexible, animated, and customizable Chat UI component for React Native.  
 Built on top of `react-native-reanimated` and `react-native-keyboard-controller`.
 
