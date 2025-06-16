@@ -2,7 +2,7 @@
 # react-native-chatlist
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: iOS / Android](https://img.shields.io/badge/platform-iOS%20%7C%20Android-blue.svg)](https://reactnative.dev)
-
+[![NPM Version](https://img.shields.io/npm/v/@saimnasser/react-native-chatlist?color=orange&label=npm)](https://www.npmjs.com/package/@saimnasser/react-native-chatlist)
 <table align="center">
   <tr>
     <td align="center">
