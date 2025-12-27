@@ -1,24 +1,47 @@
-import { useKeyboardHandler } from 'react-native-keyboard-controller'
-import { useSharedValue } from 'react-native-reanimated'
+import { useKeyboardHandler } from 'react-native-keyboard-controller';
+import { useSharedValue, withTiming } from 'react-native-reanimated';
+
+const TIMING_CONFIG = { duration: 280 };
 
 export const useKeyboardAnimation = () => {
-    const progress = useSharedValue(0)
-    const height = useSharedValue(0)
+  const height = useSharedValue(0);
+  const progress = useSharedValue(0);
+  const isInteractive = useSharedValue(false);
 
-    useKeyboardHandler({
-        onMove: (e) => {
-            'worklet'
+  useKeyboardHandler({
+    onStart: () => {
+      'worklet';
+      isInteractive.value = false;
+    },
 
-            progress.value = e.progress
-            height.value = e.height
-        },
-        onInteractive: (e) => {
-            'worklet'
+    onInteractive: (e) => {
+      'worklet';
+      isInteractive.value = true;
+      height.value = e.height;
+      progress.value = e.progress;
+    },
 
-            progress.value = e.progress
-            height.value = e.height
-        },
-    })
+    onMove: (e) => {
+      'worklet';
+      // Some platforms fire onMove instead of onInteractive
+      isInteractive.value = true;
+      height.value = e.height;
+      progress.value = e.progress;
+    },
 
-    return { height, progress }
-}
+    onEnd: (e) => {
+      'worklet';
+      isInteractive.value = false;
+
+      // iOS open/close often jumps directly to end → animate it
+      height.value = withTiming(e.height, TIMING_CONFIG);
+      progress.value = withTiming(e.progress, TIMING_CONFIG);
+    },
+  });
+
+  return {
+    height,
+    progress,
+    isInteractive,
+  };
+};

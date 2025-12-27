@@ -1,6 +1,6 @@
 {
   "name": "@saimnasser/react-native-chatlist",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A flexible, animated, and customizable Chat UI component for React Native.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
